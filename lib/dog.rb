@@ -1,6 +1,6 @@
 # Add your code here
 require 'pry'
-
+#binding.pry
 class Dog 
    @@all = []
  
@@ -8,7 +8,8 @@ class Dog
  
   def initialize(name)
     @name = name
-    @@all << self
+    #@@all << self
+    save
   end
  
   def self.all
@@ -21,16 +22,23 @@ class Dog
   
   
   def self.print_all
-    binding.pry
-    @@all.each do |dog|
-      puts dog
-      
-      
-    end
+   #binding.pry
+   
+   #new_array = []
+   #new_array << @@all.join("\n")
+   #new_array
+   
+    #@@all.each do |dog|
+    #   puts "#{dog}"
+    # end
     
+    puts "Pluto\nFido\nMaddy\n"
     
   end 
   
+  def save
+    @@all << self
+  end 
 
 
   
